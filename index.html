@@ -4,116 +4,401 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>YouTube Premium</title>
 
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #212121;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  color: #212121;
+  background: #fff;
+}
+
+/* HEADER */
+header {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #111;
+}
+
+.logo span {
+  color: #ff0033;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 590px;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.94) 0%,
+      rgba(0,0,0,.78) 42%,
+      rgba(0,0,0,.08) 100%),
+    url("https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1800")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 60px 5%;
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.premium-logo {
+  font-size: 29px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.premium-logo span {
+  color: #ff0033;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.3;
+  margin-bottom: 25px;
+}
+
+.hero h1 strong {
+  color: #ff0033;
+}
+
+.main-benefit {
+  display: inline-block;
+  background: #ff0033;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 40px;
+  font-size: clamp(20px, 2.5vw, 29px);
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #eee;
+  margin-bottom: 28px;
+}
+
+/* BUTTON */
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  background: #ff0033;
+  color: white;
+  padding: 18px 48px;
+  border-radius: 40px;
+  font-size: 21px;
+  font-weight: bold;
+  transition: .25s;
+}
+
+.cta-button:hover {
+  background: #cc0029;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255,0,51,.35);
+}
+
+/* BENEFITS */
+.benefits {
+  padding: 55px 5%;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 32px;
+  margin-bottom: 38px;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.benefit-card {
+  background: #f7f7f8;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+  transition: .3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.benefit-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 23px;
+}
+
+.card-content h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* MUSIC BANNER */
+.music-banner {
+  margin: 15px 5% 55px;
+  min-height: 260px;
+  border-radius: 20px;
+  background:
+    linear-gradient(90deg, #111 20%, #31000d 65%, #ff0033 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 5%;
+  overflow: hidden;
+}
+
+.music-text h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.music-text p {
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+
+.music-banner img {
+  width: 35%;
+  max-height: 210px;
+  object-fit: contain;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #f8f8f8;
+  color: #888;
+  font-size: 13px;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .hero {
+    min-height: 570px;
+    background-position: center;
+  }
+
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits h2 {
+    font-size: 26px;
+  }
+
+  .music-banner {
+    flex-direction: column;
     text-align: center;
-    margin: 0;
-    padding: 50px 20px;
+    gap: 20px;
   }
 
-  .container {
-    max-width: 600px;
-    margin: auto;
+  .music-banner img {
+    width: 75%;
   }
-
-  .logo {
-    color: #ff0033;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-
-  h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  .main-benefit {
-    color: #ff0033;
-    font-size: 32px;
-    font-weight: bold;
-    margin: 30px 0;
-  }
-
-  .description {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-  }
-
-  .features {
-    text-align: left;
-    display: inline-block;
-    font-size: 19px;
-    line-height: 2.2;
-    margin-bottom: 30px;
-  }
-
-  .cta-button {
-    background-color: #ff0033;
-    color: white;
-    border: none;
-    padding: 16px 45px;
-    border-radius: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .cta-button:hover {
-    background-color: #cc0029;
-  }
-
-  .footer {
-    margin-top: 30px;
-    color: #888;
-    font-size: 13px;
-  }
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
-  <div class="logo">▶ YouTube Premium</div>
-
-  <h1>
-    광고 없이 더 편하게<br>
-    YouTube를 즐겨보세요!
-  </h1>
-
-  <div class="main-benefit">
-    광고 없이 동영상 시청
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <span>▶</span> YouTube
   </div>
 
-  <p class="description">
-    끊김 없는 시청 경험으로<br>
-    좋아하는 콘텐츠에 집중하세요.
-  </p>
+  <nav>
+    <a href="#">홈</a>
+    <a href="#">Shorts</a>
+    <a href="#">구독</a>
+    <a href="#">YouTube Music</a>
+  </nav>
+</header>
 
-  <div class="features">
-    <div>🎵 백그라운드 재생</div>
-    <div>📥 오프라인 저장</div>
-    <div>🎧 YouTube Music</div>
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="premium-logo">
+      <span>▶</span> YouTube Premium
+    </div>
+
+    <h1>
+      광고 없이 더 편하게<br>
+      <strong>YouTube</strong>를 즐겨보세요!
+    </h1>
+
+    <div class="main-benefit">
+      🚫 광고 없이 동영상 시청
+    </div>
+
+    <p>
+      끊김 없는 시청 경험으로<br>
+      좋아하는 콘텐츠에 집중하세요.
+    </p>
+
+    <a
+      href="https://www.youtube.com/premium"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cta-button"
+      id="test-button">
+      Premium 가입하기 →
+    </a>
+
   </div>
 
-  <br>
+</section>
 
-  <button class="cta-button" id="test-button">
-    YouTube Premium 시작하기
-  </button>
+<!-- BENEFITS SECTION -->
+<section class="benefits">
 
-  <div class="footer">
-    언제 어디서나 더 자유로운 YouTube 경험
+  <h2>YouTube Premium만의 특별한 혜택</h2>
+
+  <div class="benefit-grid">
+
+    <!-- AD FREE -->
+    <div class="benefit-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800"
+        alt="동영상 시청">
+
+      <div class="card-content">
+        <h3>🚫 광고 없이 동영상 시청</h3>
+        <p>
+          방해받지 않고<br>
+          원하는 콘텐츠만 즐겨보세요.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- BACKGROUND PLAY -->
+    <div class="benefit-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+        alt="음악 감상">
+
+      <div class="card-content">
+        <h3>🎵 백그라운드 재생</h3>
+        <p>
+          다른 앱을 사용하면서도<br>
+          음악과 영상을 계속 재생하세요.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- OFFLINE -->
+    <div class="benefit-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9?w=800"
+        alt="스마트폰">
+
+      <div class="card-content">
+        <h3>📥 오프라인 저장</h3>
+        <p>
+          언제 어디서나<br>
+          데이터 걱정 없이 감상하세요.
+        </p>
+      </div>
+
+    </div>
+
   </div>
 
-</div>
+</section>
+
+<!-- YOUTUBE MUSIC -->
+<section class="music-banner">
+
+  <div class="music-text">
+
+    <h2>▶ YouTube Music</h2>
+
+    <p>
+      수백만 곡의 음악을 광고 없이 즐겨보세요.
+    </p>
+
+    <a
+      href="https://music.youtube.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cta-button">
+      자세히 알아보기 →
+    </a>
+
+  </div>
+
+  <img
+    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+    alt="헤드폰">
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  YouTube Premium | 더 자유로운 동영상 시청 경험
+</footer>
 
 </body>
 </html>
