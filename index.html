@@ -119,6 +119,8 @@ nav a {
   font-size: 21px;
   font-weight: bold;
   transition: .25s;
+  cursor: pointer;
+  border: none;
 }
 
 .cta-button:hover {
@@ -157,7 +159,7 @@ nav a {
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
 
-/* ĐÃ SỬA CSS ẢNH */
+/* BENEFIT IMAGES */
 .benefit-card img {
   width: 100%;
   height: 220px;
@@ -291,10 +293,9 @@ footer {
       좋아하는 콘텐츠에 집중하세요.
     </p>
 
+    <!-- PRIMARY CTA: VWO TRACKING -->
     <a
-      href="https://www.youtube.com/premium"
-      target="_blank"
-      rel="noopener noreferrer"
+      href="#"
       class="cta-button"
       id="test-button">
       Premium 가입하기 →
@@ -340,7 +341,7 @@ footer {
       </div>
     </div>
 
-    <!-- OFFLINE: ẢNH SMARTPHONE MỚI -->
+    <!-- OFFLINE DOWNLOAD -->
     <div class="benefit-card">
       <img
         src="images/offline-premium.jpg"
@@ -388,6 +389,27 @@ footer {
 <footer>
   YouTube Premium | 더 자유로운 동영상 시청 경험
 </footer>
+
+<!-- VWO CTA CLICK TRACKING -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const ctaButton = document.getElementById("test-button");
+
+  if (ctaButton) {
+    ctaButton.addEventListener("click", function (event) {
+
+      // Ngăn chuyển sang trang YouTube
+      event.preventDefault();
+
+      // Ghi nhận click để kiểm tra trong trình duyệt
+      console.log("VWO Test: CTA clicked!");
+
+    });
+  }
+
+});
+</script>
 
 </body>
 </html>
