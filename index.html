@@ -2,417 +2,441 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <!-- Start Wingify SmartCode --> 
-<script src="https://edge.wingify.net/tag/1301628.js"></script> 
-<!-- End Wingify SmartCode -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YouTube Premium</title>
+  <!-- Start Wingify SmartCode -->
+  <script src="https://edge.wingify.net/tag/1301628.js"></script>
+  <!-- End Wingify SmartCode -->
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Premium</title>
 
-body {
-  font-family: Arial, "Noto Sans KR", sans-serif;
-  color: #212121;
-  background: #fff;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* HEADER */
-header {
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 4%;
-  border-bottom: 1px solid #eee;
-  background: white;
-}
+    body {
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      color: #212121;
+      background: #fff;
+    }
 
-.logo {
-  font-size: 25px;
-  font-weight: 800;
-  color: #111;
-}
+    /* HEADER */
+    header {
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4%;
+      border-bottom: 1px solid #eee;
+      background: white;
+    }
 
-.logo span,
-.premium-logo span {
-  color: #ff0033;
-}
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #111;
+    }
 
-nav {
-  display: flex;
-  gap: 35px;
-}
+    .logo span,
+    .premium-logo span {
+      color: #ff0033;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #222;
-  font-size: 15px;
-  font-weight: 600;
-}
+    nav {
+      display: flex;
+      gap: 35px;
+    }
 
-/* HERO */
-.hero {
-  position: relative;
-  min-height: 590px;
-  background:
-    linear-gradient(90deg,
-      rgba(0,0,0,.94) 0%,
-      rgba(0,0,0,.78) 42%,
-      rgba(0,0,0,.08) 100%),
-    url("https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1800")
-    center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 60px 5%;
-  color: white;
-}
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 15px;
+      font-weight: 600;
+    }
 
-.hero-content {
-  max-width: 650px;
-}
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 590px;
+      background:
+        linear-gradient(90deg,
+          rgba(0,0,0,.94) 0%,
+          rgba(0,0,0,.78) 42%,
+          rgba(0,0,0,.08) 100%),
+        url("https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1800")
+        center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 60px 5%;
+      color: white;
+    }
 
-.premium-logo {
-  font-size: 29px;
-  font-weight: 800;
-  margin-bottom: 30px;
-}
+    .hero-content {
+      max-width: 650px;
+    }
 
-.hero h1 {
-  font-size: clamp(32px, 4vw, 52px);
-  line-height: 1.3;
-  margin-bottom: 25px;
-}
+    .premium-logo {
+      font-size: 29px;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
 
-.hero h1 strong {
-  color: #ff0033;
-}
+    .hero h1 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.3;
+      margin-bottom: 25px;
+    }
 
-.main-benefit {
-  display: inline-block;
-  background: #ff0033;
-  color: white;
-  padding: 13px 22px;
-  border-radius: 40px;
-  font-size: clamp(20px, 2.5vw, 29px);
-  font-weight: 800;
-  margin-bottom: 25px;
-}
+    .hero h1 strong {
+      color: #ff0033;
+    }
 
-.hero p {
-  font-size: 19px;
-  line-height: 1.8;
-  color: #eee;
-  margin-bottom: 28px;
-}
+    .main-benefit {
+      display: inline-block;
+      background: #ff0033;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 40px;
+      font-size: clamp(20px, 2.5vw, 29px);
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
 
-/* BUTTON */
-.cta-button {
-  display: inline-block;
-  text-decoration: none;
-  background: #ff0033;
-  color: white;
-  padding: 18px 48px;
-  border-radius: 40px;
-  font-size: 21px;
-  font-weight: bold;
-  transition: .25s;
-  cursor: pointer;
-  border: none;
-}
+    .hero p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: #eee;
+      margin-bottom: 28px;
+    }
 
-.cta-button:hover {
-  background: #cc0029;
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(255,0,51,.35);
-}
+    /* BUTTON */
+    .cta-button {
+      display: inline-block;
+      text-decoration: none;
+      background: #ff0033;
+      color: white;
+      padding: 18px 48px;
+      border-radius: 40px;
+      font-size: 21px;
+      font-weight: bold;
+      transition: .25s;
+      cursor: pointer;
+      border: none;
+    }
 
-/* BENEFITS */
-.benefits {
-  padding: 55px 5%;
-  text-align: center;
-}
+    .cta-button:hover {
+      background: #cc0029;
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(255,0,51,.35);
+    }
 
-.benefits h2 {
-  font-size: 32px;
-  margin-bottom: 38px;
-}
+    /* THANK YOU MESSAGE */
+    #thank-you-message {
+      display: none;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.7;
+      margin-top: 20px;
+      padding: 15px 20px;
+      background: rgba(255,255,255,.12);
+      border-left: 4px solid #ff0033;
+      border-radius: 8px;
+    }
 
-.benefit-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
+    /* BENEFITS */
+    .benefits {
+      padding: 55px 5%;
+      text-align: center;
+    }
 
-.benefit-card {
-  background: #f7f7f8;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: left;
-  transition: .3s;
-}
+    .benefits h2 {
+      font-size: 32px;
+      margin-bottom: 38px;
+    }
 
-.benefit-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-}
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
 
-/* BENEFIT IMAGES */
-.benefit-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
+    .benefit-card {
+      background: #f7f7f8;
+      border-radius: 20px;
+      overflow: hidden;
+      text-align: left;
+      transition: .3s;
+    }
 
-.card-content {
-  padding: 23px;
-}
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    }
 
-.card-content h3 {
-  font-size: 21px;
-  margin-bottom: 12px;
-}
+    /* BENEFIT IMAGES */
+    .benefit-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
 
-.card-content p {
-  color: #666;
-  line-height: 1.7;
-  font-size: 15px;
-}
+    .card-content {
+      padding: 23px;
+    }
 
-/* MUSIC BANNER */
-.music-banner {
-  margin: 15px 5% 55px;
-  min-height: 260px;
-  border-radius: 20px;
-  background:
-    linear-gradient(90deg, #111 20%, #31000d 65%, #ff0033 100%);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 35px 5%;
-  overflow: hidden;
-}
+    .card-content h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
 
-.music-text h2 {
-  font-size: 35px;
-  margin-bottom: 15px;
-}
+    .card-content p {
+      color: #666;
+      line-height: 1.7;
+      font-size: 15px;
+    }
 
-.music-text p {
-  font-size: 17px;
-  margin-bottom: 22px;
-}
+    /* MUSIC BANNER */
+    .music-banner {
+      margin: 15px 5% 55px;
+      min-height: 260px;
+      border-radius: 20px;
+      background:
+        linear-gradient(90deg, #111 20%, #31000d 65%, #ff0033 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 35px 5%;
+      overflow: hidden;
+    }
 
-.music-banner img {
-  width: 35%;
-  max-height: 210px;
-  object-fit: contain;
-}
+    .music-text h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #f8f8f8;
-  color: #888;
-  font-size: 13px;
-}
+    .music-text p {
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
 
-/* MOBILE */
-@media(max-width: 768px) {
-  nav {
-    display: none;
-  }
+    .music-banner img {
+      width: 35%;
+      max-height: 210px;
+      object-fit: contain;
+    }
 
-  .hero {
-    min-height: 570px;
-    background-position: center;
-  }
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #f8f8f8;
+      color: #888;
+      font-size: 13px;
+    }
 
-  .benefit-grid {
-    grid-template-columns: 1fr;
-  }
+    /* MOBILE */
+    @media(max-width: 768px) {
+      nav {
+        display: none;
+      }
 
-  .benefits h2 {
-    font-size: 26px;
-  }
+      .hero {
+        min-height: 570px;
+        background-position: center;
+      }
 
-  .music-banner {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .music-banner img {
-    width: 75%;
-  }
-}
-</style>
+      .benefits h2 {
+        font-size: 26px;
+      }
+
+      .music-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .music-banner img {
+        width: 75%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">
-    <span>▶</span> YouTube
-  </div>
-
-  <nav>
-    <a href="#">홈</a>
-    <a href="#">Shorts</a>
-    <a href="#">구독</a>
-    <a href="#">YouTube Music</a>
-  </nav>
-</header>
-
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-content">
-
-    <div class="premium-logo">
-      <span>▶</span> YouTube Premium
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <span>▶</span> YouTube
     </div>
 
-    <h1>
-      광고 없이 더 편하게<br>
-      <strong>YouTube</strong>를 즐겨보세요!
-    </h1>
+    <nav>
+      <a href="#">홈</a>
+      <a href="#">Shorts</a>
+      <a href="#">구독</a>
+      <a href="#">YouTube Music</a>
+    </nav>
+  </header>
 
-    <div class="main-benefit">
-      🚫 광고 없이 동영상 시청
-    </div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
 
-    <p>
-      끊김 없는 시청 경험으로<br>
-      좋아하는 콘텐츠에 집중하세요.
-    </p>
-
-    <!-- PRIMARY CTA: VWO TRACKING -->
-    <a
-      href="#"
-      class="cta-button"
-      id="test-button">
-      Premium 가입하기 →
-    </a>
-
-  </div>
-</section>
-
-<!-- BENEFITS SECTION -->
-<section class="benefits">
-
-  <h2>YouTube Premium만의 특별한 혜택</h2>
-
-  <div class="benefit-grid">
-
-    <!-- AD FREE -->
-    <div class="benefit-card">
-      <img
-        src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800"
-        alt="동영상 시청">
-
-      <div class="card-content">
-        <h3>🚫 광고 없이 동영상 시청</h3>
-        <p>
-          방해받지 않고<br>
-          원하는 콘텐츠만 즐겨보세요.
-        </p>
+      <div class="premium-logo">
+        <span>▶</span> YouTube Premium
       </div>
-    </div>
 
-    <!-- BACKGROUND PLAY -->
-    <div class="benefit-card">
-      <img
-        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
-        alt="음악 감상">
+      <h1>
+        광고 없이 더 편하게<br>
+        <strong>YouTube</strong>를 즐겨보세요!
+      </h1>
 
-      <div class="card-content">
-        <h3>🎵 백그라운드 재생</h3>
-        <p>
-          다른 앱을 사용하면서도<br>
-          음악과 영상을 계속 재생하세요.
-        </p>
+      <div class="main-benefit">
+        🚫 광고 없이 동영상 시청
       </div>
+
+      <p>
+        끊김 없는 시청 경험으로<br>
+        좋아하는 콘텐츠에 집중하세요.
+      </p>
+
+      <!-- PRIMARY CTA: VWO TRACKING -->
+      <a
+        href="#"
+        class="cta-button"
+        id="test-button">
+        Premium 가입하기 →
+      </a>
+
+      <!-- THANK YOU MESSAGE -->
+      <p id="thank-you-message" role="status" aria-live="polite">
+        감사합니다! YouTube Premium에 관심을 가져주셔서 감사합니다.
+      </p>
+
     </div>
+  </section>
 
-    <!-- OFFLINE DOWNLOAD -->
-    <div class="benefit-card">
-      <img
-        src="images/offline-premium.jpg"
-        alt="YouTube Premium 오프라인 저장"
-        class="benefit-image">
+  <!-- BENEFITS SECTION -->
+  <section class="benefits">
 
-      <div class="card-content">
-        <h3>📥 오프라인 저장</h3>
-        <p>
-          원하는 동영상을 미리 저장하고<br>
-          언제 어디서나 자유롭게 감상하세요.
-        </p>
+    <h2>YouTube Premium만의 특별한 혜택</h2>
+
+    <div class="benefit-grid">
+
+      <!-- AD FREE -->
+      <div class="benefit-card">
+        <img
+          src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800"
+          alt="동영상 시청">
+
+        <div class="card-content">
+          <h3>🚫 광고 없이 동영상 시청</h3>
+          <p>
+            방해받지 않고<br>
+            원하는 콘텐츠만 즐겨보세요.
+          </p>
+        </div>
       </div>
+
+      <!-- BACKGROUND PLAY -->
+      <div class="benefit-card">
+        <img
+          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+          alt="음악 감상">
+
+        <div class="card-content">
+          <h3>🎵 백그라운드 재생</h3>
+          <p>
+            다른 앱을 사용하면서도<br>
+            음악과 영상을 계속 재생하세요.
+          </p>
+        </div>
+      </div>
+
+      <!-- OFFLINE DOWNLOAD -->
+      <div class="benefit-card">
+        <img
+          src="images/offline-premium.jpg"
+          alt="YouTube Premium 오프라인 저장"
+          class="benefit-image">
+
+        <div class="card-content">
+          <h3>📥 오프라인 저장</h3>
+          <p>
+            원하는 동영상을 미리 저장하고<br>
+            언제 어디서나 자유롭게 감상하세요.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- YOUTUBE MUSIC -->
+  <section class="music-banner">
+
+    <div class="music-text">
+      <h2>▶ YouTube Music</h2>
+
+      <p>
+        수백만 곡의 음악을 광고 없이 즐겨보세요.
+      </p>
+
+      <a
+        href="https://music.youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-button">
+        자세히 알아보기 →
+      </a>
     </div>
 
-  </div>
-</section>
+    <img
+      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
+      alt="헤드폰">
 
-<!-- YOUTUBE MUSIC -->
-<section class="music-banner">
+  </section>
 
-  <div class="music-text">
-    <h2>▶ YouTube Music</h2>
+  <!-- FOOTER -->
+  <footer>
+    YouTube Premium | 더 자유로운 동영상 시청 경험
+  </footer>
 
-    <p>
-      수백만 곡의 음악을 광고 없이 즐겨보세요.
-    </p>
+  <!-- VWO CTA CLICK TRACKING + THANK YOU MESSAGE -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
 
-    <a
-      href="https://music.youtube.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="cta-button">
-      자세히 알아보기 →
-    </a>
-  </div>
+      const ctaButton = document.getElementById("test-button");
+      const thankYouMessage = document.getElementById("thank-you-message");
 
-  <img
-    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800"
-    alt="헤드폰">
+      if (ctaButton && thankYouMessage) {
+        ctaButton.addEventListener("click", function (event) {
 
-</section>
+          // Ngăn chuyển sang trang khác
+          event.preventDefault();
 
-<!-- FOOTER -->
-<footer>
-  YouTube Premium | 더 자유로운 동영상 시청 경험
-</footer>
+          // Hiển thị lời cảm ơn
+          thankYouMessage.style.display = "block";
 
-<!-- VWO CTA CLICK TRACKING -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+          // Ghi nhận click để kiểm tra trong trình duyệt
+          console.log("VWO Test: CTA clicked!");
 
-  const ctaButton = document.getElementById("test-button");
-
-  if (ctaButton) {
-    ctaButton.addEventListener("click", function (event) {
-
-      // Ngăn chuyển sang trang YouTube
-      event.preventDefault();
-
-      // Ghi nhận click để kiểm tra trong trình duyệt
-      console.log("VWO Test: CTA clicked!");
+        });
+      }
 
     });
-  }
-
-});
-</script>
+  </script>
 
 </body>
 </html>
